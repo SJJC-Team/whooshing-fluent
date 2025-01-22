@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/fluent-kit.git", from: "1.49.0"),
-        .package(url: "https://github.com/SJJC-Team/whooshing-vapor.git", branch: "developer-clwang-custom-crypto")
+        .package(url: "https://github.com/SJJC-Team/whooshing-vapor.git", branch: "main")
     ],
     targets: [
         .target(
