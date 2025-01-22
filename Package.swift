@@ -14,14 +14,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/fluent-kit.git", from: "1.49.0"),
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.101.0"),
+        .package(url: "https://github.com/SJJC-Team/whooshing-vapor.git", branch: "developer-clwang-custom-crypto")
     ],
     targets: [
         .target(
             name: "Fluent",
             dependencies: [
                 .product(name: "FluentKit", package: "fluent-kit"),
-                .product(name: "Vapor", package: "vapor"),
+                .product(name: "Vapor", package: "whooshing-vapor"),
             ],
             swiftSettings: swiftSettings
         ),
@@ -30,7 +30,7 @@ let package = Package(
             dependencies: [
                 .target(name: "Fluent"),
                 .product(name: "XCTFluent", package: "fluent-kit"),
-                .product(name: "XCTVapor", package: "vapor"),
+                .product(name: "XCTVapor", package: "whooshing-vapor"),
             ],
             swiftSettings: swiftSettings
         ),
