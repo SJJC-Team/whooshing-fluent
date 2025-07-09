@@ -15,7 +15,7 @@ jobs:
       ios_scheme_name: fluent
       work_dir: "."
 
-      with_api_check: false
+      with_api_check: true
       with_release_mode_testing: true
       ios_xcodebuild_action: ''
 
