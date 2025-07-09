@@ -20,7 +20,7 @@ jobs:
       ios_xcodebuild_action: ''
 
       with_musl: true
-      extra_musl_flags: --target fluent
+      extra_musl_flags: --target Fluent
 
       only_build: false
       with_pg_test: false
