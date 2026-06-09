@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "fluent",
+    name: "whooshing-fluent",
     platforms: [
         .macOS(.v10_15),
         .iOS(.v14),
