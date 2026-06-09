@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "Fluent", targets: ["Fluent"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/fluent-kit.git", from: "1.49.0"),
+        .package(url: "https://github.com/vapor/fluent-kit.git", from: "1.52.2"),
         .package(url: "https://github.com/whooshing-workshop/whooshing-vapor.git", from: "1.0.10")
     ],
     targets: [
@@ -30,7 +30,7 @@ let package = Package(
             dependencies: [
                 .target(name: "Fluent"),
                 .product(name: "XCTFluent", package: "fluent-kit"),
-                .product(name: "XCTVapor", package: "whooshing-vapor"),
+                .product(name: "VaporTesting", package: "whooshing-vapor"),
             ],
             swiftSettings: swiftSettings
         ),
@@ -39,9 +39,10 @@ let package = Package(
 
 var swiftSettings: [SwiftSetting] { [
     .enableUpcomingFeature("ExistentialAny"),
-    .enableUpcomingFeature("ConciseMagicFile"),
-    .enableUpcomingFeature("ForwardTrailingClosures"),
-    .enableUpcomingFeature("ImportObjcForwardDeclarations"),
-    .enableUpcomingFeature("DisableOutwardActorInference"),
-    .enableExperimentalFeature("StrictConcurrency=complete"),
+    .enableUpcomingFeature("InternalImportsByDefault"),
+    .enableUpcomingFeature("MemberImportVisibility"),
+    .enableUpcomingFeature("InferIsolatedConformances"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+    .enableUpcomingFeature("ImmutableWeakCaptures"),
 ] }
+
